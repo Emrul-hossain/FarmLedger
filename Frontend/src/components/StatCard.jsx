@@ -1,0 +1,2 @@
+import {ArrowUpRight, ArrowDownRight, Minus} from 'lucide-react';
+export default function StatCard({title,value,icon:Icon,tone='green',change}){return <div className="stat-card"><div className={`stat-icon ${tone}`}><Icon size={21}/></div><div className="stat-info"><span>{title}</span><strong>{value}</strong>{change!==undefined&&<small className={change>=0?'positive':'negative'}>{change>=0?<ArrowUpRight size={13}/>:<ArrowDownRight size={13}/>} {Math.abs(change)}% vs last month</small>}</div></div>}
